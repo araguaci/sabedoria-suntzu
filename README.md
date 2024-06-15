@@ -9,8 +9,7 @@
   - [Pricing](https://sheetdb.io/pricing)
   - [Log In Using Google Account](https://sheetdb.io/app)
 
-Google Spreadsheet data with Node.js application
-================================================
+## Google Spreadsheet data with Node.js application
 
 If you need to add Google Spreadsheet support to your Node.js application, you've come to the right place. SheetDB is a service that allows you to read, create, edit and delete Google Sheets rows. Using the REST API, we will be able to perform all these actions, let's start by adding a new API in the SheetDB panel. Create a new API using the URL sheet, you will receive a unique ID of your API.
 
@@ -18,8 +17,7 @@ In this article we're gonna use this spreadsheet: [https://docs.google.com/sprea
 
 And this is url to the API: [https://sheetdb.io/api/v1/58f61be4dda40](https://sheetdb.io/api/v1/58f61be4dda40)
 
-First steps
------------
+## First steps
 
 Ok, now let's start hacking with Node.js. We have prepared the `sheetdb-node` open source package for you. To install it, enter this command in the root folder of your Node application:
 
@@ -52,8 +50,7 @@ If you have HTTP Basic Authentication turned on for your API, you should pass `a
     // Create new client
     var client = sheetdb(config);
 
-Reading data from SheetDB with Node.js
---------------------------------------
+## Reading data from SheetDB with Node.js
 
 To read the spreadsheet we can use the read() method. You can pass the following attributes:
 
@@ -99,8 +96,7 @@ This is easiest to explain in the code, so let me give you a few examples:
 
 Hope these examples are helpful. Of course, instead of `console.log(data)`, you can use whatever logic your application needs. The data variable contains a string in a JSON format, so if you want to work on the object use the [JSON.parse()](https://www.w3schools.com/js/js_json_parse.asp) JavaScript function.
 
-Create
-------
+## Create
 
 To add data to Google Spreadsheets, send an object or an array of objects like this:
 
@@ -131,8 +127,7 @@ By default, all create operations are performed on the first sheet (worksheet). 
       console.log(err);
     });
 
-Update
-------
+## Update
 
 To update row(s), pass column name and its value which is used to find row(s).
 
@@ -149,8 +144,7 @@ To update row(s), pass column name and its value which is used to find row(s).
       console.log(err);
     });
 
-Delete
-------
+## Delete
 
 To delete row(s), pass column name and its value which is used to find row(s).
 
@@ -165,8 +159,8 @@ To delete row(s), pass column name and its value which is used to find row(s).
       console.log(err);
     });
 
-Node.js server
---------------
+
+## Node.js server
 
 If you want to use SheetDB with a Node.js server, you have a small boilerplate here:
 
@@ -197,13 +191,11 @@ If you want to use SheetDB with a Node.js server, you have a small boilerplate h
       console.log("Listening on port 1234");
     });
 
-Open source
------------
+## Open source 
 
 This package is open source, if you would like to contribute to it please visit [GitHub page](https://github.com/sheetdb/sheetdb-node) and make a pull request.
 
-Have question?
---------------
+## Have question? 
 
 If you have any questions feel free to ask us [via chat](#) or .
 
